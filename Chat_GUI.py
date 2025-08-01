@@ -4,8 +4,8 @@ import tkinter as tk
 import tkinter.scrolledtext
 from tkinter import simpledialog
 import time
-host = "0.tcp.in.ngrok.io"
-port = 14339
+host = "localhost"
+port = 9999
 
 dialog = tk.Tk()
 dialog.withdraw()
@@ -148,4 +148,5 @@ win.bind("<Return>", lambda event: write_enter())
 win.protocol("WM_DELETE_WINDOW", stop_it)
 tr = threading.Thread(target=recieve)
 tr.start()
+
 win.mainloop()
